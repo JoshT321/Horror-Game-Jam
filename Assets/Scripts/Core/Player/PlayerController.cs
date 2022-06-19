@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         inputDir = new Vector2((isSprinting ? sprintSpeed : walkSpeed) * Input.GetAxis("Vertical"), (isSprinting ? sprintSpeed : walkSpeed) * Input.GetAxis("Horizontal"));
         float moveDirY = inputDir.y;
         moveDir = transform.TransformDirection(Vector3.forward) * inputDir.x + transform.TransformDirection(Vector3.right) * inputDir.y;
-        moveDir.y = transform.position.y;
+        //moveDir.y = transform.position.y;
     }
     private void HandleMouseLook()
     {
