@@ -22,8 +22,11 @@ public class PlayerController : MonoBehaviour
     public Vector2 inputDir;
     public Vector3 lastMoveDir, moveDir, moveAmount, smoothMoveVelocity;
     public float gravity = 30f;
+    public float slopeForceRayLength = 1.5f;
+    public float slopeForce; 
     public bool isSprinting => canSprint && Input.GetKey(KeyCode.LeftShift);
     public bool isCrouched;
+    public bool isJumping;
     
     [Header("Camera Settings")] 
     
@@ -89,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    
+    #region Movement
 
     private void MovementInput()
     {
@@ -106,11 +109,41 @@ public class PlayerController : MonoBehaviour
         
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
     }
+    
     private void ApplyMovement()
     {
         if (!characterController.isGrounded) 
             moveDir.y -= gravity * Time.deltaTime;
+        if (moveDir.x != 0 && OnSlope())
+        {
+            characterController.Move(Vector3.down * characterController.height / 2 * slopeForce * Time.deltaTime);
+        }
 
         characterController.Move(moveDir * Time.deltaTime);
     }
+
+    private bool OnSlope()
+    {
+        if (isJumping)
+            return false;
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height / 2 * slopeForceRayLength))
+        {
+            if (hit.normal != Vector3.up)
+            {
+                return true; 
+            }
+
+            return false;
+        }
+        return false;
+    }
+    
+    
+
+    #endregion
+    
+
+    
 }
