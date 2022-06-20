@@ -1,18 +1,80 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractionHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private IEnumerator MoveDoor_Holder;
+    private PlayerBase Player;
+    [Header("Doors")]
+    public bool isHoldingDoor;
+
+    public float doorForce;
+    
     void Start()
     {
-        
+        Player = GetComponent<PlayerBase>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (UIManager.Instance.PlayerCursor.hoveredObject == null)
+            return;
         
+        if (UIManager.Instance.PlayerCursor.hoveredObject.CompareTag("Door") && Input.GetKey(KeyCode.Mouse0))
+        {
+            //Debug.Log("Player is hovering a door");
+            MoveDoor();
+        }
+    }
+
+    private void MoveDoor()
+    {
+        if (MoveDoor_Holder == null)
+        {
+            MoveDoor_Holder = HoldDoor_Co();
+            StartCoroutine(MoveDoor_Holder);
+        }
+        else
+        {
+            if (isHoldingDoor)
+                return;
+            StopCoroutine(MoveDoor_Holder);
+            MoveDoor_Holder = HoldDoor_Co();
+            StartCoroutine(MoveDoor_Holder);
+            
+        }
+            
+    }
+
+    private IEnumerator HoldDoor_Co()
+    {
+        float mouseY;
+        float mouseX;
+        Vector3 direction;
+        //Vector3 camStartingRotation = Camera.main.transform.eulerAngles;
+        isHoldingDoor = true;
+        Player.playerController.canMouseLook = false;
+        GameObject doorObj = UIManager.Instance.PlayerCursor.hoveredObject;
+        Rigidbody doorRb = doorObj.GetComponent<Rigidbody>();
+        
+        while (isHoldingDoor)
+        {
+            if (Input.GetMouseButtonUp(0)) isHoldingDoor = false;
+
+            //Camera.main.transform.eulerAngles = camStartingRotation;
+            direction = (Player.transform.position - doorObj.transform.position) * -Input.GetAxis("Mouse Y");
+
+            doorRb.AddForceAtPosition(direction, doorObj.transform.position); 
+            
+            yield return null;
+            
+
+        }
+
+        Player.playerController.canMouseLook = true;
+
     }
 }
