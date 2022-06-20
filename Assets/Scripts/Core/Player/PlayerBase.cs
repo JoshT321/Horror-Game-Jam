@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class PlayerBase : MonoBehaviour
 {
     public ShadowDetector ShadowDetector;
+    public PlayerController playerController;
 
 
     private void Awake()
     {
-        ShadowDetector = GetComponent<ShadowDetector>(); 
+        ShadowDetector = GetComponent<ShadowDetector>();
+        playerController = GetComponent<PlayerController>(); 
     }
 }

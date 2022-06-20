@@ -43,7 +43,7 @@ public class EnemyDetectionHandler : MonoBehaviour
 
     private void Update()
     {
-        lastKnownPositionObj.transform.position = lastKnownPosition;
+//        lastKnownPositionObj.transform.position = lastKnownPosition;
     }
 
     public IEnumerator DetectPlayer()
