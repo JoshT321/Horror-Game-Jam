@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Windows;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         
         LoadingScreen = LoadingScreenObj.GetComponent<LoadingScreen>(); 
+        
     }
 
     private static void InitializePlayerProfile()
@@ -95,6 +96,20 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Scene is done loading");
         Debug.Log("Setting Active scene to " + targetScene);
+        
+        while (!Input.GetKey(KeyCode.Space))
+        {
+            yield return null;
+        }
+        LoadingScreen.autosaveImage.gameObject.SetActive(false);
+        
+        
+        LoadingScreen.SetScreenHider(false);
+        yield return new WaitForSeconds(2f);
+        LoadingScreenObj.SetActive(false);
+        LoadingScreen.loadingCamera.gameObject.SetActive(false);
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(targetScene));
+
+        
     }
 }
