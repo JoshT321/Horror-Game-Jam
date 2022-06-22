@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public LoadingScreen LoadingScreen;
     private List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
     private float totalSceneProgress;
+    public AudioMixer audioMixer;
 
 
 
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
     private static void FirstInitialize()
     {
         Debug.Log("This message will output BEFORE awake - Load sound/video settings here");
-        InitializePlayerProfile();
+        
         SceneManager.LoadScene("PersistentScene", LoadSceneMode.Additive);
         
         //
@@ -37,24 +39,30 @@ public class GameManager : MonoBehaviour
         }
         else
             Instance = this;
-        
+        InitializePlayerProfile();
         LoadingScreen = LoadingScreenObj.GetComponent<LoadingScreen>(); 
         
     }
 
-    private static void InitializePlayerProfile()
+    public void InitializePlayerProfile()
     {
         string profilePath = Application.persistentDataPath + "/SaveData/PlayerProfile.save";
         if (File.Exists(profilePath))
         {
             Debug.Log("Loading data at " + profilePath);
             SaveData.current = (SaveData)SerializationManager.Load(profilePath);
-
+            Debug.Log("Fullscreen on savedata is " + SaveData.current.profile.isFullScreen + " So setting fullscreen status to that");
+            Screen.fullScreen = SaveData.current.profile.isFullScreen;
         }
         else
         {
             CreateNewProfile();
         }
+    }
+
+    private void Start()
+    {
+        
     }
 
     private static void CreateNewProfile()

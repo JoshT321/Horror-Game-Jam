@@ -103,11 +103,11 @@ public class PlayerController : MonoBehaviour
     }
     private void HandleMouseLook()
     {
-        rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
+        rotationX -= Input.GetAxis("Mouse Y") * (lookSpeedY + SaveData.current.profile.mouseSensitivity);
         rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
         PlayerCam.transform.localRotation= Quaternion.Euler(rotationX, 0, 0 );
         
-        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * (lookSpeedX + SaveData.current.profile.mouseSensitivity), 0);
     }
     
     private void ApplyMovement()
