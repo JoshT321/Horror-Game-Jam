@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
     public bool isClosed;
 
 
-    private void Start()
+    private void Awake()
     {
         hinge = GetComponent<HingeJoint>();
         rb = GetComponent<Rigidbody>();

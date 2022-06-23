@@ -24,9 +24,10 @@ public class InteractionHandler : MonoBehaviour
             return;
         
         if (UIManager.Instance.PlayerCursor.hoveredObject.CompareTag("Door") && Input.GetKey(KeyCode.Mouse0))
-        {
-            //Debug.Log("Player is hovering a door");
             MoveDoor();
+        if (UIManager.Instance.PlayerCursor.hoveredObject.CompareTag("Pickup") && Input.GetKey(KeyCode.Mouse0))
+        {
+            
         }
     }
 
@@ -66,7 +67,7 @@ public class InteractionHandler : MonoBehaviour
 
             //Camera.main.transform.eulerAngles = camStartingRotation;
             direction = (Player.transform.position - doorObj.transform.position) * -Input.GetAxis("Mouse Y");
-
+            Debug.Log(direction);
             doorRb.AddForceAtPosition(direction, doorObj.transform.position); 
             
             yield return null;
@@ -76,5 +77,10 @@ public class InteractionHandler : MonoBehaviour
 
         Player.playerController.canMouseLook = true;
 
+    }
+
+    public void Pickup()
+    {
+        //Player.InventoryHandler.AddToInventory(gameObject.GetComponent(<Pickup>()));
     }
 }
