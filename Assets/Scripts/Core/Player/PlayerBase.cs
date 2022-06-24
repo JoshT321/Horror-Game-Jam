@@ -8,11 +8,13 @@ public class PlayerBase : MonoBehaviour
 {
     public ShadowDetector ShadowDetector;
     public PlayerController playerController;
+    public PlayerInventory playerInventory;
 
 
     private void Awake()
     {
         ShadowDetector = GetComponent<ShadowDetector>();
-        playerController = GetComponent<PlayerController>(); 
+        playerController = GetComponent<PlayerController>();
+        playerInventory = GetComponent<PlayerInventory>(); 
     }
 }

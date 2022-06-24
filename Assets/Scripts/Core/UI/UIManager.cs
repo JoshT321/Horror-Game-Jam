@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,9 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     public PlayerCursor PlayerCursor;
-    void Start()
+    public InventoryUI InventoryUI;
+
+    private void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -15,8 +18,15 @@ public class UIManager : MonoBehaviour
         }
         else
             Instance = this;
-
         PlayerCursor = transform.Find("Cursor").GetComponent<PlayerCursor>();
+        InventoryUI = GetComponent<InventoryUI>();
+    }
+
+    void Start()
+    {
+
+
+
     }
 
 

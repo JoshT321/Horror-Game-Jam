@@ -14,7 +14,8 @@ public class PlayerProfile
     public string currentSceneName; 
     public int resolution;
     public bool isFullScreen;
-    
+    public List<int> inventoryByItemID = new(); 
+
     public void SaveMusicVolume(float newValue)
     {
         musicVolume = newValue;
@@ -48,6 +49,15 @@ public class PlayerProfile
     public void SaveBrightness(float newValue)
     {
         brightness = newValue;
+        SaveData.current.SavePlayerProfile();
+    }
+
+    public void ClearSavedInventory() => inventoryByItemID.Clear();
+
+    public void SaveItemIDToInventory(int itemID )
+    {
+        Debug.Log("Saving " + itemID + " To player profile");
+        inventoryByItemID.Add(itemID);
         SaveData.current.SavePlayerProfile();
     }
     
