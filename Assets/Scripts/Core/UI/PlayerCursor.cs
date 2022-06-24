@@ -11,6 +11,7 @@ public class PlayerCursor : MonoBehaviour
     private Image cursorImage;
     public GameObject hoveredObject; 
     public LayerMask interactableLayer;
+    public LayerMask blockLayer;
     public Ray playerAim;
     
 
@@ -31,22 +32,37 @@ public class PlayerCursor : MonoBehaviour
     public void UpdateLookedAtObject()
     {
         RaycastHit hit;
-        playerAim = playerCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f)) ;
-
-        if (Physics.Raycast(playerAim,out hit, 100f,interactableLayer ))
+        playerAim = playerCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        if (Physics.Raycast(playerAim, out hit, Mathf.Infinity, interactableLayer))
         {
+            if (hit.transform.CompareTag("Blocker"))
+            {
+                hoveredObject = null;
+                cursorImage.color = Color.white;
+                return;
+            }
+            
+            if (hit.transform.CompareTag("Pickup"))
+            {
+                cursorImage.color = Color.green;
+                hoveredObject = hit.transform.gameObject;
+                return;
+            }
             if (hit.transform.CompareTag("Door"))
             {
                 cursorImage.color = Color.red;
                 hoveredObject = hit.transform.gameObject;
                 return;
             }
+            
+
 
         }
 
         hoveredObject = null;
-        cursorImage.color = Color.white;
-        return;
-    }
+            cursorImage.color = Color.white;
+            return;
+        }
+    
 
 }
