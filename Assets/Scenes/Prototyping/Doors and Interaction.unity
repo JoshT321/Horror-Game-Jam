@@ -9610,7 +9610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5383452332460722441, guid: f67c032c21fe4b44b83d8d36ce6804b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.215
+      value: -0.386
       objectReference: {fileID: 0}
     - target: {fileID: 5383452332460722441, guid: f67c032c21fe4b44b83d8d36ce6804b1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12972,6 +12972,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
+--- !u!114 &1412744198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412744186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b3a906dce050c4f97f8064c25e996f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Mat: {fileID: 2100000, guid: 23efff431927bbf4db8b585ec74c2fa4, type: 2}
+  m_Type: 0
+  m_DrunkIntensity: 0
+  m_RGBShiftFactor: 0
+  m_RGBShiftPower: 3
+  m_GhostSeeRadius: 0.01
+  m_GhostSeeMix: 0.5
+  m_GhostSeeAmplitude: 0.05
+  m_Frequency: 1
+  m_Period: 1.5
+  m_Amplitude: 1
+  m_BlurMin: 0.1
+  m_BlurMax: 0.3
+  m_BlurSpeed: 3
+  m_SleepyEye: 0
+  m_EyeClose: 0.4
 --- !u!1001 &1415311137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17541,6 +17569,39 @@ PrefabInstance:
     - {fileID: 3451118302482216456, guid: 18e5fe56e0e158649b52a0337107adf4, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 18e5fe56e0e158649b52a0337107adf4, type: 3}
+--- !u!1 &1830235008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4986694189290165169, guid: 80f7d02be2a8cee4693118aebc5dea1c, type: 3}
+  m_PrefabInstance: {fileID: 1872242716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830235009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830235008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b3a906dce050c4f97f8064c25e996f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Mat: {fileID: 2100000, guid: 23efff431927bbf4db8b585ec74c2fa4, type: 2}
+  m_Type: 0
+  m_DrunkIntensity: 0
+  m_RGBShiftFactor: 0
+  m_RGBShiftPower: 3
+  m_GhostSeeRadius: 0.01
+  m_GhostSeeMix: 0.5
+  m_GhostSeeAmplitude: 0.05
+  m_Frequency: 1
+  m_Period: 1.5
+  m_Amplitude: 1
+  m_BlurMin: 0.1
+  m_BlurMax: 0.3
+  m_BlurSpeed: 3
+  m_SleepyEye: 0
+  m_EyeClose: 0.4
 --- !u!1 &1840694989
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class PlayerCursor : MonoBehaviour
     {
         playerCam = Camera.main;
         cursorImage = GetComponent<Image>();
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         ;
     }
 
