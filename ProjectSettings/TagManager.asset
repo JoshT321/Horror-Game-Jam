@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Door
+  - Pickup
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -15,16 +18,16 @@ TagManager:
   - Enemy
   - Wall
   - Waypoint
+  - POV Render
+  - Interactable
+  - Blocker
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessing
   - 
   - 
   - 
