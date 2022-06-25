@@ -269,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShadowDetector: {fileID: 0}
   playerController: {fileID: 0}
+  playerInventory: {fileID: 0}
 --- !u!114 &199151268
 MonoBehaviour:
   m_ObjectHideFlags: 0
