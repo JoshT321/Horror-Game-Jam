@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_WoodBoards_01
+    second: {fileID: 2100000, guid: 94edf7afdd39ad744ad0afe208104217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_WoodTile_01
     second: {fileID: 2100000, guid: 2d68a532040815d44a6906c75603bc49, type: 2}
   materials:
