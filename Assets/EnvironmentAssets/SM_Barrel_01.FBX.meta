@@ -3,11 +3,16 @@ guid: 1c83d5286d6f22c48b0685ac0c99a17b
 ModelImporter:
   serializedVersion: 22102
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WoodTile_01
+    second: {fileID: 2100000, guid: ccef370882963fb49a3b25f6562b1c52, type: 2}
   materials:
-    materialImportMode: 2
-    materialName: 0
-    materialSearch: 1
+    materialImportMode: 1
+    materialName: 2
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -47,7 +52,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

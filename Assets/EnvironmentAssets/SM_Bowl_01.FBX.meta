@@ -3,7 +3,12 @@ guid: 6cd4962eac6ac7c46b408e73d0b4f934
 ModelImporter:
   serializedVersion: 22102
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ClayTile_01
+    second: {fileID: 2100000, guid: 5169b18d9b280f047806ba020ccb637e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +52,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
