@@ -3,7 +3,12 @@ guid: 46887b8462ea6c147b9576fb1d3cb470
 ModelImporter:
   serializedVersion: 22102
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Fireplace_01
+    second: {fileID: 2100000, guid: 102f25457e544af4e92b0b4237c95d15, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
