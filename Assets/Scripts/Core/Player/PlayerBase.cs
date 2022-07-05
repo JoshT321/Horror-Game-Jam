@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,5 +17,10 @@ public class PlayerBase : MonoBehaviour
         ShadowDetector = GetComponent<ShadowDetector>();
         playerController = GetComponent<PlayerController>();
         playerInventory = GetComponent<PlayerInventory>(); 
+    }
+
+    public static PlayerBase Find()
+    {
+        return FindObjectOfType<PlayerBase>(); 
     }
 }

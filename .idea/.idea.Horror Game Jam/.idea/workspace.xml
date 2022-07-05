@@ -2,14 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a1c0fb-b7ce-4d8b-a94c-ed747ee55526" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Horror Game Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Horror Game Jam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/3D Models/Wolf/Materials/wolfiemommy_clr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/3D Models/Wolf/Materials/wolfiemommy_clr.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Drunk Man/BuiltIn/Demo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Drunk Man/BuiltIn/Demo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Drunk Man/Common/Shader/Drunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Drunk Man/Common/Shader/Drunk.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Drunk Man/URP/PipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Drunk Man/URP/PipelineAsset_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/Floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/LastKnownPosition.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/LastKnownPosition.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/Wall.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/Waypoint.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Seth/Materials/Waypoint.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Global Volume.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Global Volume.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototyping/Doors and Interaction.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototyping/Doors and Interaction.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Player/InteractionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Player/InteractionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototyping/MainMenuFunctionality.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototyping/MainMenuFunctionality.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototyping/MainMenuFunctionality_Profiles/Global Volume Profile(URP).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototyping/MainMenuFunctionality_Profiles/Global Volume Profile(URP).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototyping/MainMenuFunctionality_Profiles/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototyping/MainMenuFunctionality_Profiles/Global Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Management/PostProcessingHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Management/PostProcessingHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SaveLoad/PlayerProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SaveLoad/PlayerProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ScriptableObjects/SingletonReferences.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ScriptableObjects/SingletonReferences.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UI/PlayerCursor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/UI/PlayerCursor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +36,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Database/Item/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Interaction/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Interaction/Pickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerEyeDistortion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Player/PlayerVision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ScriptableObjects/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ScriptableObjects/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ScriptableObjects/SingletonReferences.cs" root0="FORCE_HIGHLIGHTING" />
@@ -29,6 +46,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Werewolf/AI/States/Idle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Werewolf/AI/States/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@13.1.8/Runtime/Volume/VolumeComponent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@13.1.8/Runtime/Volume/VolumeProfile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@13.1.8/Runtime/Passes/AdditionalLightsShadowCasterPass.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@13.1.8/Runtime/ScriptableRenderer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,6 +123,13 @@
       <workItem from="1655513829503" duration="6606000" />
       <workItem from="1655592475394" duration="14692000" />
       <workItem from="1656027018538" duration="14785000" />
+      <workItem from="1656186063049" duration="2132000" />
+      <workItem from="1656269506479" duration="617000" />
+      <workItem from="1656364768834" duration="2003000" />
+      <workItem from="1656403118888" duration="437000" />
+      <workItem from="1656625426029" duration="7557000" />
+      <workItem from="1656794232139" duration="1196000" />
+      <workItem from="1656809090352" duration="7000" />
     </task>
     <servers />
   </component>

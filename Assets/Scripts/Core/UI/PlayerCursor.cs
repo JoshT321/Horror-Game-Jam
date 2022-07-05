@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerCursor : MonoBehaviour
 {
-    private Camera playerCam;
+    public Camera playerCam;
     private Image cursorImage;
     public GameObject hoveredObject; 
     public LayerMask interactableLayer;
@@ -16,10 +16,16 @@ public class PlayerCursor : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         playerCam = Camera.main;
         cursorImage = GetComponent<Image>();
+    }
+
+    void Start()
+    {
+
         //Cursor.lockState = CursorLockMode.Locked;
         ;
     }

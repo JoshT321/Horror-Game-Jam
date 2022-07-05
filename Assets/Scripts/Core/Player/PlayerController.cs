@@ -8,6 +8,7 @@ using UnityEngine.TextCore.Text;
 
 public class PlayerController : MonoBehaviour
 {
+    public PlayerBase player;
     public CharacterController characterController;
     
     [Header("Functional Options")]
@@ -47,11 +48,18 @@ public class PlayerController : MonoBehaviour
     public float crouchBobAmount;
     public float timer;
     private float defaultYPos = 0;
-    void Start()
+
+    private void Awake()
     {
+        player = GetComponent<PlayerBase>();
         characterController = GetComponent<CharacterController>();
         PlayerCam = transform.Find("Cam").gameObject;
         defaultYPos = PlayerCam.transform.localPosition.y;
+    }
+
+    void Start()
+    {
+
 
 
     }

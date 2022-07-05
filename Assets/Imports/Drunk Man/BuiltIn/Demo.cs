@@ -31,7 +31,7 @@ namespace DrunkMan.BuiltIn
 
 		void Start()
 		{
-			GraphicsSettings.renderPipelineAsset = null;   // disable URP
+			//GraphicsSettings.renderPipelineAsset = null;   // disable URP
 			QualitySettings.antiAliasing = 8;
 		}
 		void Update()
