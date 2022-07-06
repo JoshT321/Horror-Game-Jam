@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a6b9b6d60556c034a80befb8721b6730
+guid: e07166c5d71dc18418b383d5d571def2
 ModelImporter:
   serializedVersion: 22102
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_WoodTile_01
-    second: {fileID: 2100000, guid: 2d68a532040815d44a6906c75603bc49, type: 2}
+      name: M_Carpet_01
+    second: {fileID: 2100000, guid: 9c0bd6f95972504479315cd7b3ce6fa6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -42,7 +42,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
