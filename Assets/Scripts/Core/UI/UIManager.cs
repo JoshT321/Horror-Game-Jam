@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     public PlayerCursor PlayerCursor;
     public InventoryUI InventoryUI;
+    public DialogueHandler dialogueHandler;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
             Instance = this;
         PlayerCursor = transform.Find("Cursor").GetComponent<PlayerCursor>();
         InventoryUI = GetComponent<InventoryUI>();
+        dialogueHandler = GetComponent<DialogueHandler>();
     }
 
     void Start()

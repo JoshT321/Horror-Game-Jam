@@ -21,12 +21,16 @@ public class PlayerCursor : MonoBehaviour
     {
         playerCam = Camera.main;
         cursorImage = GetComponent<Image>();
+<<<<<<< Updated upstream
     }
 
     void Start()
     {
 
         //Cursor.lockState = CursorLockMode.Locked;
+=======
+        Cursor.lockState = CursorLockMode.Locked;
+>>>>>>> Stashed changes
         ;
     }
 
@@ -57,6 +61,13 @@ public class PlayerCursor : MonoBehaviour
             if (hit.transform.CompareTag("Door"))
             {
                 cursorImage.color = Color.red;
+                hoveredObject = hit.transform.gameObject;
+                return;
+            }
+
+            if (hit.transform.CompareTag("Dialogue"))
+            {
+                cursorImage.color = Color.magenta;
                 hoveredObject = hit.transform.gameObject;
                 return;
             }

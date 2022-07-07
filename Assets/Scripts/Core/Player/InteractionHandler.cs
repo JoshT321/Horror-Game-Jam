@@ -9,8 +9,13 @@ public class InteractionHandler : MonoBehaviour
     private PlayerBase Player;
     [Header("Doors")]
     public bool isHoldingDoor;
-
     public float doorForce;
+    [Header("Dialogue Settings")]
+    public bool isInDialogue;
+    public Dialogue currentDialogue;
+    public Queue<string> dialogueQueue = new Queue<string>();
+
+    
     
     void Start()
     {
@@ -20,9 +25,12 @@ public class InteractionHandler : MonoBehaviour
 
     private void Update()
     {
+        if (isInDialogue && Input.anyKeyDown) GoNextDialogue();
+        
+        
         if (UIManager.Instance.PlayerCursor.hoveredObject == null)
             return;
-        
+
 
         if (UIManager.Instance.PlayerCursor.hoveredObject.CompareTag("Pickup") && Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -30,6 +38,60 @@ public class InteractionHandler : MonoBehaviour
         }
         if (UIManager.Instance.PlayerCursor.hoveredObject.CompareTag("Door") && Input.GetKey(KeyCode.Mouse0))
             MoveDoor();
+
+        if (UIManager.Instance.PlayerCursor.hoveredObject.TryGetComponent(out IDialogue dialogueObject) && Input.GetKeyDown(KeyCode.E))
+        {
+            
+            StartDialogue(dialogueObject.GetDialogue());
+
+        }
+            
+        
+        
+    }
+
+    private void StartDialogue(Dialogue dialogue)
+    {
+        Debug.Log("Begin Dialogue");
+        isInDialogue = true;
+        currentDialogue = dialogue;
+        UIManager.Instance.dialogueHandler.ShowDialogueBox();
+
+        for (int i = 0; i < currentDialogue.dialogueEntrys.Length; i++)
+        {
+            dialogueQueue.Enqueue(currentDialogue.dialogueEntrys[i]);
+            Debug.Log("Adding dialogue to queue");
+        }
+            
+        
+        GoNextDialogue();
+        
+    }
+
+    private void GoNextDialogue()
+    {
+        if (UIManager.Instance.dialogueHandler.isWritingDialogue)
+        {
+            Debug.Log("Skipping to end of dialogue");
+            UIManager.Instance.dialogueHandler.SkipDialogueWrite();
+            return;
+        }
+        if (dialogueQueue.Count <= 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        UIManager.Instance.dialogueHandler.DisplayDialogueText(dialogueQueue.Dequeue());
+
+
+    }
+
+    private void EndDialogue()
+    {
+        isInDialogue = false;
+        UIManager.Instance.dialogueHandler.HideDialogueBox();
+        
     }
 
     private void MoveDoor()
@@ -85,4 +147,6 @@ public class InteractionHandler : MonoBehaviour
         Player.playerInventory.AddToInventory(UIManager.Instance.PlayerCursor.hoveredObject.GetComponent<Pickup>().item);
         Destroy(UIManager.Instance.PlayerCursor.hoveredObject.transform.gameObject);
     }
+    
+    
 }
