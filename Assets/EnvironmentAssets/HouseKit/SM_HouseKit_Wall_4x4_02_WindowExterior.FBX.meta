@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: a653a95d7843ecd4bb8ffae603c3f496
+guid: 501e4d88f33b5024a9f03ff0f0dec31f
 ModelImporter:
   serializedVersion: 22102
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_WoodBoards_01
-    second: {fileID: 2100000, guid: 94edf7afdd39ad744ad0afe208104217, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_WoodTile_01
-    second: {fileID: 2100000, guid: 2d68a532040815d44a6906c75603bc49, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -57,7 +47,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
